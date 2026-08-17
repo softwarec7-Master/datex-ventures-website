@@ -1,0 +1,19 @@
+DATEX VENTURES — PRODUCTION DEPLOYMENT CHECKLIST
+=================================================
+
+[ ] Choose final domain
+[ ] Replace YOUR-DOMAIN.com in sitemap.xml
+[ ] Confirm official business email
+[ ] Confirm official phone number
+[ ] Connect demo/enquiry form to email or CRM
+[ ] Replace V5 product mockup with verified screenshots
+[ ] Publish final Privacy Policy
+[ ] Publish final Terms & Conditions
+[ ] Enable HTTPS
+[ ] Configure DNS
+[ ] Submit sitemap to Google Search Console
+[ ] Test desktop and mobile
+[ ] Test enquiry flow
+[ ] Final production backup
+
+Do not publish placeholder contact/domain details.
