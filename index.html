@@ -3,9 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="DateX Ventures — Build. Automate. Grow.">
-<title>DateX Ventures | Build. Automate. Grow.</title>
+<meta name="description" content="DateX Ventures builds practical business software, automation solutions and digital products. Explore Chit Management System V5 and request a product demo.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="DateX Ventures | Business Software & Automation">
+<meta property="og:description" content="Build. Automate. Grow. Explore DateX Ventures software products and request a demo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://datexventures.com/">
+<title>DateX Ventures | Business Software & Automation</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+/* Conversion layer — keeps the existing DateX design intact */
+.lead-note{display:block;margin-top:10px;opacity:.75;font-size:12px;line-height:1.5}
+.whatsapp-float{
+  position:fixed;right:22px;bottom:22px;z-index:9999;
+  display:flex;align-items:center;gap:9px;padding:13px 18px;
+  border-radius:999px;text-decoration:none;font-weight:800;
+  background:#25D366;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.25)
+}
+.whatsapp-float:hover{transform:translateY(-2px)}
+.form-status{display:none;margin-top:12px;padding:12px 14px;border-radius:10px;font-size:13px}
+.form-status.show{display:block}
+.form-status.ok{background:#e8fff0;color:#116b35}
+.form-status.err{background:#fff0f0;color:#8a1f1f}
+.quick-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.quick-actions a{display:inline-flex;align-items:center;justify-content:center}
+</style>
 </head>
 <body>
 <div class="topline">DateX Ventures • Software Products • Business Solutions • Digital Innovation</div>
@@ -74,12 +96,12 @@
 <section id="solutions" class="section dark reveal">
  <div class="wrap">
   <div class="eyebrow light">02 / WHAT WE DO</div>
-  <div class="section-head"><h2>Solutions built around<br><span>real business needs.</span></h2><p>Our future portfolio is designed around practical software, automation and digital business solutions.</p></div>
+  <div class="section-head"><h2>Solutions built around<br><span>real business needs.</span></h2><p>Our portfolio is designed around practical software, automation and digital business solutions.</p></div>
   <div class="solution-grid">
    <article><div class="num">01</div><h3>Software Products</h3><p>Purpose-built business applications designed for everyday operational control.</p><a href="#product">Explore →</a></article>
-   <article><div class="num">02</div><h3>Business Solutions</h3><p>Digital tools that bring workflows, information and decisions together.</p><a href="#contact">Discuss →</a></article>
-   <article><div class="num">03</div><h3>Automation</h3><p>Reduce repetitive work and create smoother, more consistent processes.</p><a href="#contact">Discuss →</a></article>
-   <article><div class="num">04</div><h3>Digital Innovation</h3><p>Modern technology ideas shaped around useful commercial outcomes.</p><a href="#contact">Discuss →</a></article>
+   <article><div class="num">02</div><h3>Business Solutions</h3><p>Digital tools that bring workflows, information and decisions together.</p><a href="#demo">Discuss →</a></article>
+   <article><div class="num">03</div><h3>Automation</h3><p>Reduce repetitive work and create smoother, more consistent processes.</p><a href="#demo">Discuss →</a></article>
+   <article><div class="num">04</div><h3>Digital Innovation</h3><p>Modern technology ideas shaped around useful commercial outcomes.</p><a href="#demo">Discuss →</a></article>
   </div>
  </div>
 </section>
@@ -93,10 +115,15 @@
     <h2>Chit Management<br><span>System V5</span></h2>
     <p class="large">Commercial Edition for modern chit business management.</p>
     <div class="feature-list">
-      <div><b>01</b><span>Members & Groups</span></div><div><b>02</b><span>Auctions & Collections</span></div>
-      <div><b>03</b><span>Payments & Receipts</span></div><div><b>04</b><span>Accounts & Reports</span></div>
+      <div><b>01</b><span>Members & Groups</span></div>
+      <div><b>02</b><span>Auctions & Collections</span></div>
+      <div><b>03</b><span>Payments & Receipts</span></div>
+      <div><b>04</b><span>Accounts & Reports</span></div>
     </div>
-    <a class="btn blue big" href="#demo">Request Product Demo <b>→</b></a>
+    <div class="quick-actions">
+      <a class="btn blue big" href="#demo">Request Product Demo <b>→</b></a>
+      <a class="btn orange big" href="#demo">Get Pricing</a>
+    </div>
    </div>
    <div class="product-card">
      <div class="pc-top"><b>CHIT MANAGEMENT SYSTEM</b><span>V5</span></div>
@@ -127,15 +154,33 @@
 
 <section id="demo" class="section demo reveal">
  <div class="wrap demo-box">
-   <div><div class="eyebrow light">05 / LET'S TALK</div><h2>Ready to build<br><span>something better?</span></h2><p>Tell us what your business needs. We’ll start with the problem and work towards the right solution.</p></div>
+   <div>
+     <div class="eyebrow light">05 / LET'S TALK</div>
+     <h2>Ready to build<br><span>something better?</span></h2>
+     <p>Tell us what your business needs. We’ll start with the problem and work towards the right solution.</p>
+     <div class="quick-actions">
+       <!-- Replace YOUR_WHATSAPP_NUMBER before production. Example: 919876543210 -->
+       <a class="btn orange big" data-wa-link href="#" target="_blank" rel="noopener">WhatsApp Us <b>↗</b></a>
+     </div>
+   </div>
+
    <form id="demoForm">
-     <input required placeholder="Your name">
-     <input required placeholder="Business / Company">
-     <input required type="email" placeholder="Email address">
-     <input required placeholder="Phone number">
-     <textarea placeholder="Tell us briefly about your requirement"></textarea>
-     <button class="btn orange big" type="submit">Send Enquiry <b>→</b></button>
-     <small>Prototype form — connect to your official email/CRM before production.</small>
+     <input id="leadName" required autocomplete="name" placeholder="Your name">
+     <input id="leadBusiness" required autocomplete="organization" placeholder="Business / Company">
+     <input id="leadEmail" required type="email" autocomplete="email" placeholder="Email address">
+     <input id="leadPhone" required type="tel" autocomplete="tel" placeholder="Phone number">
+     <select id="leadInterest" required>
+       <option value="">What are you interested in?</option>
+       <option>Chit Management System V5</option>
+       <option>Custom Business Software</option>
+       <option>AI / Business Automation</option>
+       <option>Website / Digital Solution</option>
+       <option>Other Business Requirement</option>
+     </select>
+     <textarea id="leadRequirement" placeholder="Tell us briefly about your requirement"></textarea>
+     <button class="btn orange big" type="submit">Send Enquiry on WhatsApp <b>→</b></button>
+     <div id="formStatus" class="form-status" role="status"></div>
+     <small class="lead-note">Your enquiry will open WhatsApp with the details pre-filled. We will use your information only to respond to your business enquiry.</small>
    </form>
  </div>
 </section>
@@ -144,17 +189,83 @@
  <div class="wrap contact-grid">
   <div><div class="brand darkbrand"><span class="logo">D<span>X</span></span><span>DateX<small>VENTURES</small></span></div><p>Build • Automate • Grow</p></div>
   <div><h4>Explore</h4><a href="#about">About</a><a href="#solutions">Solutions</a><a href="#product">Product</a></div>
-  <div><h4>Contact</h4><a href="tel:+918148814919">+91 81488 14919</a><a href="mailto:8148814919tnice@gmail.com">8148814919tnice@gmail.com</a><a href="#demo">Request a Demo</a></div>
-  <div><h4>Office</h4><p>1st Floor, Near Chandra Mahal,<br>MMKovilur Bye-Pass,<br>Dindigul – 624005,<br>Tamil Nadu, India.</p></div>
+  <div><h4>Connect</h4><a href="#demo">Request a Demo</a><a href="#demo">Business Enquiry</a><a data-wa-link href="#" target="_blank" rel="noopener">WhatsApp</a></div>
+  <div><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
  </div>
 </section>
 </main>
+
 <footer><div class="wrap">© 2026 DateX Ventures <span>•</span> All rights reserved.</div></footer>
+
+<a class="whatsapp-float" data-wa-link href="#" target="_blank" rel="noopener" aria-label="Chat with DateX Ventures on WhatsApp">💬 WhatsApp</a>
+
 <script>
-document.querySelector(".hamb").addEventListener("click",()=>document.querySelector("nav").classList.toggle("open"));
-document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>document.querySelector("nav").classList.remove("open")));
-document.getElementById("demoForm").addEventListener("submit",e=>{e.preventDefault();alert("Enquiry captured in the design prototype. Connect this form to your official email/CRM before launch.");});
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting) entry.target.classList.add("visible")}),{threshold:.12});
+const WHATSAPP_NUMBER = "918148814919"; // Official DateX Ventures WhatsApp number.
+
+function whatsappUrl(message){
+  return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+}
+
+function updateWhatsAppLinks(){
+  const message = "Hello DateX Ventures, I would like to know more about your products and business solutions.";
+  document.querySelectorAll("[data-wa-link]").forEach(link=>{
+    if(WHATSAPP_NUMBER !== "YOUR_WHATSAPP_NUMBER"){
+      link.href = whatsappUrl(message);
+    }else{
+      link.href = "#demo";
+      link.removeAttribute("target");
+    }
+  });
+}
+
+document.querySelector(".hamb").addEventListener("click",()=>{
+  document.querySelector("nav").classList.toggle("open");
+});
+document.querySelectorAll("nav a").forEach(a=>a.addEventListener("click",()=>{
+  document.querySelector("nav").classList.remove("open");
+}));
+
+document.getElementById("demoForm").addEventListener("submit",e=>{
+  e.preventDefault();
+
+  const name=document.getElementById("leadName").value.trim();
+  const business=document.getElementById("leadBusiness").value.trim();
+  const email=document.getElementById("leadEmail").value.trim();
+  const phone=document.getElementById("leadPhone").value.trim();
+  const interest=document.getElementById("leadInterest").value;
+  const requirement=document.getElementById("leadRequirement").value.trim();
+
+  const status=document.getElementById("formStatus");
+
+  if(WHATSAPP_NUMBER === "YOUR_WHATSAPP_NUMBER"){
+    status.className="form-status show err";
+    status.textContent="WhatsApp is ready for the configured DateX Ventures number.";
+    return;
+  }
+
+  const message =
+`New DateX Ventures Enquiry
+
+Name: ${name}
+Business / Company: ${business}
+Email: ${email}
+Phone: ${phone}
+Interested In: ${interest}
+Requirement: ${requirement || "Not specified"}
+
+Source: DateX Ventures Website`;
+
+  status.className="form-status show ok";
+  status.textContent="Opening WhatsApp with your enquiry...";
+  window.open(whatsappUrl(message),"_blank","noopener");
+});
+
+updateWhatsAppLinks();
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting) entry.target.classList.add("visible")
+}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 </script>
-</body></html>
+</body>
+</html>
